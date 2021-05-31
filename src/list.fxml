@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<GridPane alignment="center" hgap="10" prefHeight="427.0" prefWidth="833.0" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.ListController">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="212.0" minHeight="37.0" prefHeight="201.0" />
+        <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+        <RowConstraints />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+    </rowConstraints>
+    <children>
+        <Button fx:id="goback" mnemonicParsing="false" onAction="#returnToMain" prefHeight="30.0" prefWidth="335.0" text="Jít zpět" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+        <TableView fx:id="tableReservations" prefHeight="204.0" prefWidth="618.0">
+            <columns>
+                <TableColumn fx:id="idr" text="ID Rezervace">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="jmeno_prijmeni" text="Jméno - Příjmení">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="jmeno_prijmeni" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="spz" text="SPZ Vozidla">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="spz" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="datum" text="Datum">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="datum" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="cas" text="Čas">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="cas" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="zavada" text="Závada">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="zavada" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+      <Button fx:id="smazat_radek" mnemonicParsing="false" onAction="#removeSelectedItem" prefHeight="30.0" prefWidth="335.0" style="-fx-background-color: #272727;" text="Smazat označený řádek" textFill="WHITE" GridPane.rowIndex="3" />
+    </children>
+</GridPane>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<GridPane alignment="center" hgap="10" prefHeight="449.0" prefWidth="225.0" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.FXMLDocumentController">
+   <columnConstraints>
+      <ColumnConstraints halignment="CENTER" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+   </rowConstraints>
+   <children>
+      <DatePicker fx:id="datePicker" GridPane.rowIndex="4" />
+      <Button fx:id="button" mnemonicParsing="false" onAction="#postResetvation" prefHeight="25.0" prefWidth="173.0" style="-fx-background-color: #272727;" text="Vybrat tento termín" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="6" />
+      <TextField fx:id="spz" promptText="SPZ Vozidla" GridPane.rowIndex="2" />
+      <Button fx:id="listbutton" mnemonicParsing="false" onAction="#goToList" prefHeight="50.0" prefWidth="172.0" text="Všechny rezervace" GridPane.rowIndex="8" />
+      <Label fx:id="timelabel" GridPane.rowIndex="5" />
+      <Button fx:id="employeebutton" layoutX="36.0" layoutY="259.0" mnemonicParsing="false" onAction="#goToListEmployee" prefHeight="50.0" prefWidth="172.0" style="-fx-background-color: transparent;" text="Všichni zaměstnanci" textFill="TRANSPARENT" GridPane.rowIndex="9" />
+      <TextField fx:id="jmenoprijmeni" layoutX="35.0" layoutY="51.0" promptText="Jméno a příjmení" GridPane.rowIndex="1" />
+      <TextField fx:id="cas" promptText="15:00" GridPane.rowIndex="5" />
+      <TextField fx:id="id_pracovnik" promptText="ID pracovníka" style="visibility: hidden;" />
+      <TextField fx:id="zavada" promptText="Závada" GridPane.rowIndex="3" />
+   </children>
+</GridPane>
